@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-
+gem 'angular-rails-templates'
+gem 'bower-rails'
+gem 'responders'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
