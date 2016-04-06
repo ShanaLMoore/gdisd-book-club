@@ -1,5 +1,5 @@
 angular 
-  .module('readingList', ['ui.router', 'ngResource', 'templates'])
+  .module('app', ['ui.router', 'ngResource', 'templates'])
   .config(function($stateProvider, $urlRouterProvider){
     $stateProvider
       .state('home', {
@@ -8,18 +8,18 @@ angular
         controller: 'HomeController as ctrl'
       })
       .state('home.bookclub',{
-        url: 'bookclub',
-        templateUrl: 'home/bookclub.html',
+        url: '/bookclub',
+        templateUrl: 'views/bookclub.html',
         controller: 'ReadingListController as ctrl'
       })
       .state('home.classes',{
-        url: 'classes',
-        templateUrl: 'home/classes.html',
+        url: '/classes',
+        templateUrl: 'views/classes.html',
         controller: 'ClassesControllr as ctrl'
       })
       .state('home.meetups',{
-        url: 'meetups',
-        templateUrl: 'home/meetups.html',
+        url: '/meetups',
+        templateUrl: 'views/meetups.html',
         controller: 'MeetUpsController as ctrl'
       });
 
