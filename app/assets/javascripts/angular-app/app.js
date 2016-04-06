@@ -10,17 +10,17 @@ angular
       .state('home.bookclub',{
         url: '/bookclub',
         templateUrl: 'views/bookclub.html',
-        controller: 'ReadingListController as ctrl'
+        controller: 'BookClubController as ctrl'
       })
       .state('home.classes',{
         url: '/classes',
         templateUrl: 'views/classes.html',
-        controller: 'ClassesControllr as ctrl'
+        controller: 'ClassesController as ctrl'
       })
       .state('home.meetups',{
         url: '/meetups',
         templateUrl: 'views/meetups.html',
-        controller: 'MeetUpsController as ctrl'
+        controller: 'MeetupsController as ctrl'
       });
 
       $urlRouterProvider.otherwise('/');
