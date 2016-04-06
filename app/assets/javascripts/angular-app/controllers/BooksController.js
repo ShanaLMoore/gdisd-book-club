@@ -1,16 +1,6 @@
 angular
   .module('app')
-  .controller('BookClubController', BookClubController)
-  .directive('bookGenres', function(){
-    return {
-      restrict: 'E',
-      templateUrl: 'bookclub/book-genres.html',
-      scope: {
-        genres: '='
-      }
-    }
-  })
-
+  .controller('BooksController', BooksController)
   .directive('bookCover', function(){
     return {
       restrict: 'E',
@@ -42,7 +32,7 @@ angular
   });
 
 
-  function BookClubController (Book) {
+  function BooksController (Book) {
     var ctrl = this;
     ctrl.books = Book.query();
 
