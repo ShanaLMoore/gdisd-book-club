@@ -1,0 +1,12 @@
+
+<div class="row">
+
+  <button class="btn btn-default" ng-click="ctrl.showForm = !ctrl.showForm">{{ctrl.showForm ? "Cancel" : "Create a Review"}}</button>
+  <hr />
+  <review-form change-review-form="ctrl.changeReviewForm" books="ctrl.books" ng-show="ctrl.showForm"></review-form>
+
+  <h1>{{ctrl.book.name}}</h1>
+</div>   
+
+
+

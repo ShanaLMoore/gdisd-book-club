@@ -1,28 +1,24 @@
 
 <h1>Book Club</h1>
-<h2>We Are Currently Reading: </h2>
+<h3>We Are Currently Reading: </h3>
 
-<h1>Reading List</h1>
-<div class="row" ng-controller="BooksController as readingListCtrl">
+  <a href="http://www.amazon.com/gp/product/B0012D1CV0"><img ng-src="http://images.amazon.com/images/P/B0012D1CV0.01.ZTZZZZZZ.jpg" alt="Cover of 'My Answer is No . . . If That's Okay with You: How Women Can Say No and (Still) Feel Good About It'" class="full"></a><hr>
 
-  <button class="btn btn-default" ng-click="readingListCtrl.showForm = !readingListCtrl.showForm">{{readingListCtrl.showForm ? "Cancel" : "Create a Review"}}</button>
-  <hr />
-  <review-form change-review-form="readingListCtrl.changeReviewForm" books="readingListCtrl.books" genres="readingListCtrl.genres" ng-show="readingListCtrl.showForm"></review-form>
-  <hr />
+<input ng-model="ctrl.search" placeholder="search by book title"/>
 
+<h3>Reading List:</h3>
+<div class="row">
   <ul class="list-unstyled col-sm-8">
-    <li class="book row" ng-repeat="book in readingListCtrl.books">
+    <li class="book row" ng-repeat="book in ctrl.books | filter: ctrl.search">
       <book-cover></book-cover>
       <div class="col-sm-9">
         <a href="http://www.amazon.com/gp/product/{{book.isbn}}"
             ></a>
-        <h3><a href="#" ui-sref="">{{book.title}}</a></h3>
+        <h3><a href="#" ui-sref="gdisd.book({id: book.id})">{{book.title}}</a></h3>
 
-        <cite class="text-muted">Written by {{book.author}}</cite>
+        <cite class="text-muted">Written by {{book.author}}</cite> 
 
         <p>{{book.review}}</p>
-
-        <book-genres genres="book.genres"></book-genres>
 
       </div>
     </li>

@@ -1,4 +1,6 @@
-<form name="reviewForm" class="form-horizontal" ng-submit="reviewFormCtrl.addReview(reviewForm, reviewFormCtrl.book)">
+
+
+<form name="reviewForm" class="form-horizontal" ng-submit="ctrl.editBook()">
 
   <section class="row well live-preview" ng-show="reviewFormCtrl.book.isbn">
     <aside class="col-sm-3">
@@ -27,28 +29,6 @@
   </section>
 
   <div class="input-container">
-    <fieldset class="form-group">
-    <label for="title" class="col-sm-2 control-label">Title:</label>
-    <span class="col-sm-9">
-      <input type="text" class="form-control" id="title" ng-model="reviewFormCtrl.book.title"
-      placeholder="Book Title">
-    </span>
-    </fieldset>
-
-    <fieldset class="form-group">
-    <label for="isbn" class="control-label col-sm-2">ISBN:</label>
-    <span class="col-sm-9">
-      <input type="text" id="isbn" class="form-control" ng-model="reviewFormCtrl.book.isbn"
-      maxLength="10" placeholder="ISBN-10">
-    </span>
-    </fieldset>
-
-    <fieldset class="form-group">
-    <label class="control-label col-sm-2" for="author">Author</label>
-    <span class="col-sm-9">
-      <input type="text" id="author" class="form-control" ng-model="reviewFormCtrl.book.author"
-      placeholder="Name of the Author"></span>
-    </fieldset>
 
     <fieldset class="form-group">
       <label class="control-label col-sm-2" for="review">Review</label>
@@ -69,16 +49,6 @@
           <option>1</option>
         </select>
       </span>
-    </fieldset>
-
-    <fieldset class="form-group">
-      <label class="control-label col-sm-2" >Genre:</label>
-      <div class="genre">
-        <label ng-repeat="genre in genres" for="{{genre}}" class="genre-label form-control">
-          <input type="checkbox" name="genre" id="{{genre}}" ng-model="reviewFormCtrl.book.genres[genre]" />
-          {{genre}}
-        </label>
-      </div>
     </fieldset>
 
     <fieldset class="form-group">
