@@ -2,14 +2,13 @@ angular
   .module('app')
   .controller('EditReviewController', EditReviewController);
 
-function EditReviewController () {
-  var ctrl = this;
+function EditReviewController (Book, $location, $state, $stateParams, $http, $scope) {
 
-  ctrl.book = Book.get({id: $stateParams});
-  
-  ctrl.editReview = function () {
-    ctrl.book.$update(function () {
+  $scope.book = Book.get({id: $stateParams.id});
+ 
+  $scope.editReview = function () {
+    $scope.book.$update(function () {
       $location.path('books');
     });
-  };
+  }
 }
