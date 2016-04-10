@@ -12,11 +12,6 @@ angular
         templateUrl: 'bookclub/index.html',
         controller: 'BooksController as ctrl'
       })
-      .state('gdisd.book',{
-        url: 'book/:id',
-        templateUrl: 'bookclub/show.html',
-        controller: 'ShowBookController as ctrl'
-      })
       .state('gdisd.edit',{
         url: 'book/:id',
         templateUrl: 'bookclub/edit.html',
@@ -30,7 +25,12 @@ angular
       .state('gdisd.meetups',{
         url: 'meetups',
         templateUrl: 'meetups/index.html',
-        controller: 'MeetupsController as ctrl'
+        controller: 'MeetupsController as ctrl',
+        resolve: {
+          meetups: function(MeetupsService){
+            return MeetupsService.getMeetups();
+          }
+        }
       });
 
       $urlRouterProvider.otherwise('/');
