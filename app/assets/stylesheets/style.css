@@ -1,0 +1,33 @@
+.btn:focus {
+  outline: none;
+}
+
+.book {
+  margin-bottom: 40px;
+}
+
+li.book > aside p.rating {
+  color: #7A292A;
+  font-size: 1.2em;
+}
+
+.book .rating.goodRating {
+  color: #499130;
+}
+
+book-cover {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.live-preview {
+  float: right;
+  width: 48%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.live-preview > aside, li.book > aside {
+  padding: 0;
+}
