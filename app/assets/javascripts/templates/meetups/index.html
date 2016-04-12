@@ -1,10 +1,14 @@
+<div class="events" style="text-align:center">
+  <h1>Upcoming Events</h1>
 
-<h1>Upcoming Events</h1>
 
-<div class="col-sm-9" ng-repeat="event in ctrl.events">
-  <h3>{{event.name}}</h3>
-  <p>{{event.venue.name}}: {{event.venue.address_1}}</p> 
-  <button><a href="{{event.event_url}}" target="_blank">RSVP</a></button>
+    <form class="form-horizontal" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" ng-model="ctrl.search" style="text-align:center">
+    </form>
+      <div ng-repeat="event in ctrl.events | filter: ctrl.search">
+        <h3>{{event.name}}</h3>
+        <p>{{event.venue.name}}: {{event.venue.address_1}}</p> 
+        <a href="{{event.event_url}}" target="_blank" class="btn btn-primary">RSVP</a><hr>
+      </div>
 </div>
-
-

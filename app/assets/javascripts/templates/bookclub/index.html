@@ -1,26 +1,31 @@
+<div class="bookclub" style="text-align:center">
+  <h1>Book Club</h1>
+  <h3>We Are Currently Reading:</h3>
 
-<h1>Book Club</h1>
-<h3>We Are Currently Reading:</h3>
+    <a href="http://www.amazon.com/gp/product/B0012D1CV0"><img ng-src="http://images.amazon.com/images/P/B0012D1CV0.01.ZTZZZZZZ.jpg" alt="Cover of 'My Answer is No . . . If That's Okay with You: How Women Can Say No and (Still) Feel Good About It'" class="full"></a><hr>
 
-  <a href="http://www.amazon.com/gp/product/B0012D1CV0"><img ng-src="http://images.amazon.com/images/P/B0012D1CV0.01.ZTZZZZZZ.jpg" alt="Cover of 'My Answer is No . . . If That's Okay with You: How Women Can Say No and (Still) Feel Good About It'" class="full"></a><hr>
+      <form class="form-horizontal" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" ng-model="ctrl.search" style="text-align:center">
+      </form>
 
-<input ng-model="ctrl.search" placeholder="search by book title"/>
 
-<h3>Reading List:</h3>
-<div class="row">
-  <ul class="list-unstyled col-sm-8">
-    <li class="book row" ng-repeat="book in ctrl.books | filter: ctrl.search">
-      <book-cover></book-cover>
-      <div class="col-sm-9">
-        <a href="http://www.amazon.com/gp/product/{{book.isbn}}"
-            ></a>
-        <h3><a href="#" ui-sref="gdisd.edit({id: book.id})">{{book.title}}</a></h3>
+  <h3>Reading List:</h3>
+  <div>
+    <ul class="list-unstyled col-sm-10">
+      <li class="book row" ng-repeat="book in ctrl.books | filter: ctrl.search">
+        <book-cover></book-cover>
+        <div class="col-sm-9">
+          <a href="http://www.amazon.com/gp/product/{{book.isbn}}"
+              ></a>
+          <h3><a href="#" ui-sref="gdisd.edit({id: book.id})">{{book.title}}</a></h3>
 
-        <cite class="text-muted">Written by {{book.author}}</cite> 
+          <cite class="text-muted">Written by {{book.author}}</cite> 
 
-        <p>{{book.review}}</p>
+          <p>{{book.review}}</p><hr>
 
-      </div>
-    </li>
-  </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
