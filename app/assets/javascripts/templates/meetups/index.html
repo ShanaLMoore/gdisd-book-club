@@ -9,6 +9,7 @@
       <div ng-repeat="event in ctrl.events | filter: ctrl.search">
         <h3>{{event.name}}</h3>
         <p>{{event.venue.name}}: {{event.venue.address_1}}</p> 
+        <p>{{event.time | date:"MM/dd/yyyy @ h:mma"}}</p> 
         <a href="{{event.event_url}}" target="_blank" class="btn btn-primary">RSVP</a><hr>
       </div>
 </div>
