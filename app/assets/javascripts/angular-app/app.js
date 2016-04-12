@@ -17,10 +17,10 @@ angular
         templateUrl: 'bookclub/edit.html',
         controller: 'EditReviewController as ctrl'
       })
-      .state('gdisd.classes',{
-        url: 'classes',
-        templateUrl: 'classes/index.html',
-        controller: 'ClassesController as ctrl'
+      .state('gdisd.contact',{
+        url: 'contact',
+        templateUrl: 'contact/index.html',
+        controller: 'ContactController as ctrl'
       })
       .state('gdisd.meetups',{
         url: 'meetups',

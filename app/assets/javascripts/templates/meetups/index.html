@@ -1,3 +1,10 @@
 
-<h1>UPCOMING MEETUPS</h1>
+<h1>Upcoming Events</h1>
+
+<div class="col-sm-9" ng-repeat="event in ctrl.events">
+  <h3>{{event.name}}</h3>
+  <p>{{event.venue.name}}: {{event.venue.address_1}}</p> 
+  <button><a href="{{event.event_url}}" target="_blank">RSVP</a></button>
+</div>
+
 

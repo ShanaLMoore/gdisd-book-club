@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'devise'
 gem 'meetup_client'
 gem 'dotenv'
 gem 'devise'

@@ -9,6 +9,7 @@ function EditReviewController (Book, $location, $state, $stateParams, $http, $sc
   $scope.editReview = function () {
     $scope.book.$update(function () {
       $location.path('books');
+      $setPristine();
     });
   }
 }

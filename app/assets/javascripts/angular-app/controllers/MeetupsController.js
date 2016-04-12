@@ -3,7 +3,8 @@ angular
   .controller('MeetupsController', MeetupsController);
 
   function MeetupsController (meetups) {
-    this.data = meetups.data;
-    console.log(this.data);
+    var ctrl = this;
+    ctrl.data = meetups.data;
+    ctrl.events = meetups.data.results;
   }
 
