@@ -29,9 +29,16 @@ angular
   });
 
 
-  function BooksController (Book) {
+  function BooksController (Book, $location, $state) {
     var ctrl = this;
     ctrl.books = Book.query();
+
+
+    ctrl.deleteBook = function(book) {
+      book.$delete(function() {
+        $state.go($state.current, {}, {reload: true});
+      });
+    };
   };
 
 
