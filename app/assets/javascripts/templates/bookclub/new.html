@@ -1,6 +1,6 @@
 
 
-<form class="form-horizontal" validate ng-submit="addBook(book)">
+<form class="form-horizontal" validate ng-submit="addBook()">
 
   <section class="row well live-preview" ng-show="book.isbn">
     <aside class="col-sm-3">
@@ -46,9 +46,9 @@
       required="required" placeholder="Name of the Author"></span>
     </fieldset>
 
-    <fieldset class="form-group">
-      <span class="col-sm-9 col-sm-offset-2 button-from-hell">
-        <button class="btn btn-primary">Add Book</button>
-      </span>
-    </fieldset>
+    <div class="form-group">
+      <div>
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Add Book</button>
+      </div>
   </div>

@@ -24,7 +24,6 @@ angular
       controllerAs: 'reviewFormCtrl',
       scope: {
         books: '=',
-        genres: '='
       }
     }
   });

@@ -1,0 +1,40 @@
+
+<form validate class="form-horizontal" ng-submit="ctrl.postJob()">
+
+  <div class="input-container">
+    <fieldset class="form-group">
+    <label for="job_title" class="col-sm-2 control-label">Job Title:</label>
+    <span class="col-sm-9">
+      <input type="text" class="form-control" id="title" ng-model="ctrl.job.job_title"
+      required="required" placeholder="Job Title">
+    </span>
+    </fieldset>
+
+    <fieldset class="form-group">
+    <label for="company_name" class="control-label col-sm-2">Company:</label>
+    <span class="col-sm-9">
+      <input type="text" id="isbn" class="form-control" ng-model="ctrl.job.company_name"
+      maxLength="10" required="required" placeholder="Company Name">
+    </span>
+    </fieldset>
+
+    <fieldset class="form-group">
+    <label class="control-label col-sm-2" for="location">Location:</label>
+    <span class="col-sm-9">
+      <input type="text" id="author" class="form-control" ng-model="ctrl.job.location"
+      required="required" placeholder="City, State"></span>
+    </fieldset>
+
+    <fieldset class="form-group">
+    <label class="control-label col-sm-2" for="url">URL:</label>
+    <span class="col-sm-9">
+      <input type="text" id="author" class="form-control" ng-model="ctrl.job.url"
+      required="required" placeholder="Website URL"></span>
+    </fieldset>    
+
+    <div class="form-group">
+      <div>
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Post Job</button>
+      </div>
+  </div>

@@ -25,8 +25,13 @@ angular
       .state('gdisd.jobs',{
         url: 'jobs',
         templateUrl: 'jobs/index.html',
-        controller: 'JobPostingController as ctrl'
-      })      
+        controller: 'JobsController as ctrl'
+      })
+      .state('gdisd.newjobs',{
+        url: 'newjobs',
+        templateUrl: 'jobs/new.html',
+        controller: 'NewJobsController as ctrl'
+      })       
       .state('gdisd.contact',{
         url: 'contact',
         templateUrl: 'contact/index.html',

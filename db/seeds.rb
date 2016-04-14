@@ -8,3 +8,5 @@
 
 current_book = Book.create(title:"My Answer is No . . . If That's Okay with You: How Women Can Say No and (Still) Feel Good About It", isbn:"B0012D1CV0", author:"Nanette Gartrell")
 previous_book = Book.create(title:"Lean Out: The Struggle for Gender Equality in Tech and Start-Up Culture", isbn:"B015JWUC92", author:"Elissa Shevinsky")
+
+job = Job.create(job_title:"software engineer", company_name:"Qualcomm", location:"San Diego, CA")

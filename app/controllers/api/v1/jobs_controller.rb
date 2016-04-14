@@ -10,18 +10,18 @@ module Api
         respond_with(Job.find(params[:id]))
       end 
       def create 
-        @job = Job.new(Job_params) 
-        if @Job.save 
+        @job = Job.new(job_params) 
+        if @job.save 
           respond_to do |format|
-            format.json { render :json => @Job }
+            format.json { render :json => @job }
           end 
         end 
       end 
       def update 
         @job = Job.find(params[:id])
-        if @job.update(Job_params) 
+        if @job.update(job_params) 
           respond_to do |format| 
-            format.json { render :json => @Job }
+            format.json { render :json => @job }
           end 
         end 
       end 
@@ -31,7 +31,7 @@ module Api
       end 
       private 
         def job_params 
-          params.require(:Job).permit(:job_title, :company_name, :location, :url) 
+          params.require(:job).permit(:job_title, :company_name, :location, :url) 
         end
 
     end

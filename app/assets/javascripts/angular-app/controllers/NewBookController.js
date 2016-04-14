@@ -2,7 +2,7 @@ angular
   .module('app')
   .controller('NewBookController', NewBookController);
 
-function NewBookController (Book, $location, $scope, $http) {
+function NewBookController (Book, $location, $scope) {
 
   $scope.book = new Book();
 
@@ -10,7 +10,6 @@ function NewBookController (Book, $location, $scope, $http) {
     console.log(book);
     $scope.book.$save(function () {
       $location.path('books');
-      form.$setPristine();
     });
   }
 }

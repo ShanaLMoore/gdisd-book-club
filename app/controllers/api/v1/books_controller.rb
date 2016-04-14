@@ -11,7 +11,7 @@ module Api
       end 
       def create 
         @book = Book.new(book_params) 
-        if @Book.save 
+        if @book.save 
           respond_to do |format|
             format.json { render :json => @book }
           end 
