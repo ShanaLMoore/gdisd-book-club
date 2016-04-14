@@ -12,11 +12,21 @@ angular
         templateUrl: 'bookclub/index.html',
         controller: 'BooksController as ctrl'
       })
+      .state('gdisd.new', {
+        url: 'new',
+        templateUrl: 'bookclub/new.html',
+        controller: 'NewBookController as ctrl'
+      })      
       .state('gdisd.edit',{
         url: 'book/:id',
         templateUrl: 'bookclub/edit.html',
         controller: 'EditReviewController as ctrl'
       })
+      .state('gdisd.jobs',{
+        url: 'jobs',
+        templateUrl: 'jobs/index.html',
+        controller: 'JobPostingController as ctrl'
+      })      
       .state('gdisd.contact',{
         url: 'contact',
         templateUrl: 'contact/index.html',

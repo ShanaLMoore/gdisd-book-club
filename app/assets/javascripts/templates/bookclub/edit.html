@@ -19,12 +19,6 @@
       <cite class="text-muted">Written by {{book.author || "Author's Name"}}</cite>
 
       <p>{{book.review || "No review yet."}}</p>
-
-      <ul class="list-unstyled">
-        <li ng-repeat="(genre, state) in book.genres">
-          <span class="label label-primary" ng-show="state">{{genre}}</span>
-        </li>
-      </ul>
     </div>
   </section>
 

@@ -1,0 +1,14 @@
+<h1>Job Board</h1>
+<p></p>
+
+<div>
+    <ul class="list-unstyled col-sm-10">
+      <li ng-repeat="job in ctrl.jobs | filter: ctrl.search">
+
+          <h3><a href="#" ui-sref="{{ctrl.job.url}}">{{ctrl.job || "No job postings available yet."}}</a></h3>
+
+      </li>
+    </ul>
+  </div>
+
+<a href="#" ui-sref="gdisd.new" ui-sref-active="active" ng-show="ctrl.admin"><button class="btn btn-primary control-label">Add A Job</button></a>

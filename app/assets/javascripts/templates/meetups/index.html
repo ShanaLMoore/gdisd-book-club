@@ -1,15 +1,16 @@
 <div class="events" style="text-align:center">
-  <h1>Upcoming Events</h1>
+  <h1>Upcoming Events</h1><br>
 
 
     <form class="form-horizontal" role="search">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search" ng-model="ctrl.search" style="text-align:center">
-    </form>
+    </form><br>
       <div ng-repeat="event in ctrl.events | filter: ctrl.search">
         <h3>{{event.name}}</h3>
         <p>{{event.venue.name}}: {{event.venue.address_1}}</p> 
         <p>{{event.time | date:"MM/dd/yyyy @ h:mma"}}</p> 
+        
         <a href="{{event.event_url}}" target="_blank" class="btn btn-primary">RSVP</a><hr>
       </div>
 </div>

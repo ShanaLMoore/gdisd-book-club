@@ -4,10 +4,8 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.text :isbn
       t.string :author
-      t.string :genre
       t.text :review
       t.integer :rating
-      t.integer :user_id
 
       t.timestamps null: false
     end

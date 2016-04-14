@@ -1,0 +1,54 @@
+
+
+<form class="form-horizontal" validate ng-submit="addBook(book)">
+
+  <section class="row well live-preview" ng-show="book.isbn">
+    <aside class="col-sm-3">
+      <a href="http://www.amazon.com/gp/product/{{book.isbn}}">
+        <img ng-src="http://images.amazon.com/images/P/{{book.isbn}}.01.ZTZZZZZZ.jpg" alt="Cover of {{book.title}}" class="full">
+      </a>
+      <p>{{book.rating || '0'}}/5</p>
+    </aside>
+
+    <div class="col-sm-9">
+      <h3>
+        <a href="http://www.amazon.com/gp/product/{{book.isbn}}">
+          {{book.title || "Title of Book"}}
+        </a>
+      </h3>
+      <cite class="text-muted">Written by {{book.author || "Author's Name"}}</cite>
+
+      <p>{{book.review || "No review yet."}}</p>
+    </div>
+  </section>
+
+  <div class="input-container">
+    <fieldset class="form-group">
+    <label for="title" class="col-sm-2 control-label">Title:</label>
+    <span class="col-sm-9">
+      <input type="text" class="form-control" id="title" ng-model="book.title"
+      required="required" placeholder="Book Title">
+    </span>
+    </fieldset>
+
+    <fieldset class="form-group">
+    <label for="isbn" class="control-label col-sm-2">ISBN:</label>
+    <span class="col-sm-9">
+      <input type="text" id="isbn" class="form-control" ng-model="book.isbn"
+      maxLength="10" required="required" placeholder="ISBN-10">
+    </span>
+    </fieldset>
+
+    <fieldset class="form-group">
+    <label class="control-label col-sm-2" for="author">Author</label>
+    <span class="col-sm-9">
+      <input type="text" id="author" class="form-control" ng-model="book.author"
+      required="required" placeholder="Name of the Author"></span>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <span class="col-sm-9 col-sm-offset-2 button-from-hell">
+        <button class="btn btn-primary">Add Book</button>
+      </span>
+    </fieldset>
+  </div>

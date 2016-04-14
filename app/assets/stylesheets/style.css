@@ -31,3 +31,8 @@ book-cover {
 .live-preview > aside, li.book > aside {
   padding: 0;
 }
+
+      #map {
+        width: 400px;
+        height: 300px;
+      }
