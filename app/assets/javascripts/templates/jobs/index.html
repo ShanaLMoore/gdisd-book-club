@@ -5,9 +5,8 @@
   <div>
     <ul class="list-unstyled">
       <li ng-repeat="job in ctrl.jobs">
-        <hr>
           <h4><a href="{{job.url}}" target="_blank">{{job.job_title || "No job postings available yet."}}</a></h4>
-          <a href ng-show="#" ng-click="ctrl.deleteJob(job)">Delete Post</a> 
+          <a href ng-show="#" ng-click="ctrl.deleteJob(job)">Delete Post</a><hr> 
       </li>
     </ul>
   </div><br><br><br><br><br><br><br>
