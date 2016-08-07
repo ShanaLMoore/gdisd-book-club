@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
 
-  def self.book(number)
+  def self.rated_books(number)
     books = Book.all
 
     books.select do |book|
